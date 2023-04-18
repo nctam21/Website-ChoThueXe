@@ -7,13 +7,13 @@ namespace WebBookingCar.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class UpdateCarImage : IMigrationMetadata
+    public sealed partial class CreatedDataabase : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdateCarImage));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CreatedDataabase));
         
         string IMigrationMetadata.Id
         {
-            get { return "202304141515219_UpdateCarImage"; }
+            get { return "202304170723118_CreatedDataabase"; }
         }
         
         string IMigrationMetadata.Source

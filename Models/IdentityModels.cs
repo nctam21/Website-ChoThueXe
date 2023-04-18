@@ -38,7 +38,7 @@ namespace WebBookingCar.Models
         public DbSet<Car> Cars { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<CarImage> CarImages { get; set; }
-        public DbSet<Booking> Booking { get; set; }
+      
         public DbSet<BookingDetail> BookingDetails { get; set; }
         public DbSet<Subscribe> Subscribes { get; set; }
         public static ApplicationDbContext Create()

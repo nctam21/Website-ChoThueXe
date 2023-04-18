@@ -180,7 +180,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Controllers\BookingController.cs" />
     <Compile Include="Areas\Admin\Controllers\CarCategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\CarImageController.cs" />
     <Compile Include="Areas\Admin\Controllers\CarsController.cs" />
@@ -194,21 +193,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202304091526108_CreateDataabase.cs" />
-    <Compile Include="Migrations\202304091526108_CreateDataabase.designer.cs">
-      <DependentUpon>202304091526108_CreateDataabase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202304141515219_UpdateCarImage.cs" />
-    <Compile Include="Migrations\202304141515219_UpdateCarImage.designer.cs">
-      <DependentUpon>202304141515219_UpdateCarImage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202304151401194_UpdateBookingDetail.cs" />
-    <Compile Include="Migrations\202304151401194_UpdateBookingDetail.designer.cs">
-      <DependentUpon>202304151401194_UpdateBookingDetail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202304151432510_UpdateCar.cs" />
-    <Compile Include="Migrations\202304151432510_UpdateCar.designer.cs">
-      <DependentUpon>202304151432510_UpdateCar.cs</DependentUpon>
+    <Compile Include="Migrations\202304170723118_CreatedDataabase.cs" />
+    <Compile Include="Migrations\202304170723118_CreatedDataabase.designer.cs">
+      <DependentUpon>202304170723118_CreatedDataabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -3009,6 +2996,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\autoNumeric-1.9.45.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\Admin\Views\web.config" />
@@ -3173,7 +3161,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Views\Booking\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -3189,21 +3176,12 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202304091526108_CreateDataabase.resx">
-      <DependentUpon>202304091526108_CreateDataabase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202304141515219_UpdateCarImage.resx">
-      <DependentUpon>202304141515219_UpdateCarImage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202304151401194_UpdateBookingDetail.resx">
-      <DependentUpon>202304151401194_UpdateBookingDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202304151432510_UpdateCar.resx">
-      <DependentUpon>202304151432510_UpdateCar.cs</DependentUpon>
-    </EmbeddedResource>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
+    <EmbeddedResource Include="Migrations\202304170723118_CreatedDataabase.resx">
+      <DependentUpon>202304170723118_CreatedDataabase.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
