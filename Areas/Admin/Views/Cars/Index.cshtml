@@ -100,7 +100,7 @@
                                     <a href="#" data-id="@item.Id" class="btnActive"> @Html.Raw(strCheck)</a>
                                 </td>
                                 <td>
-                                    <a href="/admin/car/edit/@item.Id" <a href="#" class="btn btn-sm btn-primary">Sửa</a>
+                                    <a href="/admin/cars/edit/@item.Id" <a href="#" class="btn btn-sm btn-primary">Sửa</a>
                                     <a href="#" data-id="@item.Id" class="btn btn-sm btn-danger btnDelete">Xóa</a>
                                 </td>
                             </tr>
@@ -175,7 +175,7 @@
                     }
                 });
                 if (str.length > 0) {
-                    var conf = confirm("Bạn có muốn xóa tất cả các tin tức không");
+                    var conf = confirm("Bạn có muốn xóa tất cả các xe không");
                     if (conf === true) {
                         $.ajax({
                             url: '/admin/new/deleteAll',
@@ -208,7 +208,7 @@
                 var conf = confirm('Bạn có muốn xóa bản ghi này không');
                 if (conf === true) {
                     $.ajax({
-                        url: '/admin/car/delete',
+                        url: '/admin/cars/delete',
                         type: 'POST',
                         data: { id: id },
                         success: function (rs) {
