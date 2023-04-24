@@ -1,0 +1,120 @@
+﻿@model IEnumerable<WebBookingCar.Models.EF.Car>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <div class="container-fluid py-5">
+    <div class="container pt-5 pb-3">
+        <h1 class="display-4 text-uppercase text-center mb-5">Tìm xe của bạn</h1>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+        <div class="col-lg-4 col-md-6 mb-2">
+            <div class="rent-item mb-4">
+                <img class="img-fluid mb-4" src="~/Content/Images/@item.Image" alt="">
+                <h4 class="text-uppercase mb-4">@item.Detail</h4>
+                <div class="d-flex justify-content-center mb-4">
+                    <div class="px-2">
+                        <i class="fa fa-car text-primary mr-1"></i>
+                        <span>@item.Title</span>
+                    </div>
+                    <div class="px-2 border-left border-right">
+                        <i class="fa fa-user text-primary mr-1"></i>
+                        <span>@item.Description</span>
+                    </div>
+                    <div class="px-2">
+                        <i class="fa fa-road text-primary mr-1"></i>
+                        <span>@item.IsActive</span>
+                    </div>
+                </div>
+                <a class="btn btn-primary px-3" href="@Url.Action("Order", "RentalCotracts", new {id = item.Id})">$@item.Price/Ngày</a>
+            </div>
+        </div>
+            }
+        </div>
+    </div>
+</div>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarCategory.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Alias)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Detail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Image)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PriceSale)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsSale)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsHome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SeoTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SeoDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SeoKeywords)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsActive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifierBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fromdate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Todate)
+        </td>
+        
+    </tr>
+}
+
+</table>
+@*<td>
+    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+</td>*@
