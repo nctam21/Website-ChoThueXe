@@ -1,7 +1,7 @@
 ﻿@using Microsoft.AspNet.Identity.EntityFramework
 @model IdentityRole
 @{
-    ViewBag.Title = "Sửa Quyền Truy Cập";
+    ViewBag.Title = "Sửa Mới Quyền";
 }
 
 @section naviheader{
@@ -13,24 +13,21 @@
             <a href="/Admin/home" class="nav-link">Trang chủ</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="/admin/category" class="nav-link">Danh mục</a>
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
-            <a href="/admin/category" class="nav-link">Cập nhật</a>
+            <a href="/admin/category" class="nav-link">@ViewBag.Title</a>
         </li>
     </ul>}
 
-
+<!-- Content Header (Page header) -->
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Cập nhật danh mục</h1>
+                <h1>Danh sách danh mục</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="#">Danh mục</a></li>
-                    <li class="breadcrumb-item active">Cập nhật</li>
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">@ViewBag.Title</li>
                 </ol>
             </div>
         </div>
@@ -43,57 +40,28 @@
     <!-- Default box -->
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Thông tin Phân Quyền</h3>
+            <h3 class="card-title">Thêm Mới Quyền Truy Cập @ViewBag.Title</h3>
+
+
         </div>
+
         <div class="card-body">
-            <div class="row">
-                <div class="col-md-12">
-                    @using (Html.BeginForm("Edit", "Role", FormMethod.Post, new { }))
-                    {
-                        @Html.AntiForgeryToken()
-                        @Html.ValidationSummary(true)
-                        @Html.HiddenFor(x => x.Id)
-                       
-                        <div class="card">
-                            <div class="card-header p-2">
-                                <ul class="nav nav-pills">
-                                    <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Thông tin chung</a></li>
-                                   
-                                </ul>
-                            </div><!-- /.card-header -->
-                            <div class="card-body">
-                                <div class="tab-content">
-                                    <div class="active tab-pane" id="activity">
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Tên sản phẩm</label>
-                                            @Html.TextBoxFor(x => x.Name, new { @class = "form-control", @placeholder = "Tên sản phẩm" })
-                                            @Html.ValidationMessageFor(x => x.Name, null, new { @class = "text-danger" })
-                                        </div>
-                                        
-                                        </div>
-                                    </div>
-                                    <!-- /.tab-pane -->
-
-                                <div class="form-group">
-                                <button type="submit" class="btn btn-success">Lưu Lại</button>
-                                <a href="/admin/cars" class="btn btn-danger">Quay lại</a>
-                            </div>
-                                  
-                                    <!-- /.tab-pane -->
-                                </div>
-                                <!-- /.tab-content -->
-                            </div><!-- /.card-body -->
-                            
-                        <!-- /.card -->
-                    }
+            @using (Html.BeginForm("Create", "Role", FormMethod.Post))
+            {
+                @Html.ValidationSummary(true)
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
                 </div>
-            </div>
-        </div>
-        <!-- /.card-body -->
-        <div class="card-footer">
+                <div class="form-group">
+                    <a style="background-color: red;" href="/admin/category" class="btn btn-primary">Quay lại</a>
+                    <button style="background-color: green;" type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            }
+
+
 
         </div>
-        <!-- /.card-footer-->
     </div>
     <!-- /.card -->
 

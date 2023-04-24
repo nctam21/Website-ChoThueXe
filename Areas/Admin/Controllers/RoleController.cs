@@ -52,5 +52,17 @@ namespace WebBookingCar.Areas.Admin.Controllers
             }
             return View(model);
         }
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            var item = db.Roles.Find(id);
+            if (item != null)
+            {
+                db.Roles.Remove(item);
+                db.SaveChanges();
+                return Json(new { success = true });
+            }
+            return Json(new { success = false });
+        }
     }
 }

@@ -117,7 +117,26 @@ namespace WebBookingCar.Areas.Admin.Controllers
                 }
                 return Json(new { success = false });
             }
-            public ActionResult IsActive(int id)
+        [HttpPost]
+        public ActionResult DeleteAll(string ids)
+        {
+            if (!string.IsNullOrEmpty(ids))
+            {
+                var items = ids.Split(',');
+                if (items != null && items.Any())
+                {
+                    foreach (var item in items)
+                    {
+                        var obj = db.Cars.Find(Convert.ToInt32(item));
+                        db.Cars.Remove(obj);
+                        db.SaveChanges();
+                    }
+                }
+                return Json(new { success = true });
+            }
+            return Json(new { success = false });
+        }
+        public ActionResult IsActive(int id)
             {
                 var item = db.Cars.Find(id);
                 if (item != null)
@@ -129,7 +148,10 @@ namespace WebBookingCar.Areas.Admin.Controllers
                 }
                 return Json(new { success = false });
             }
-        }
+        
+        
 
     }
+
+}
 

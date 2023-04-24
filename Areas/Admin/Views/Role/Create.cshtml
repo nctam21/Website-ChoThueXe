@@ -48,7 +48,7 @@
         <div class="card-body">
            @using (Html.BeginForm("Create","Role",FormMethod.Post))
             {
-                @Html.ValidationSummary(false)
+                @Html.ValidationSummary(true)
                @Html.AntiForgeryToken()
                <div class="form-group">
                    @Html.TextBoxFor(x=>x.Name, new {@class ="form-control"})

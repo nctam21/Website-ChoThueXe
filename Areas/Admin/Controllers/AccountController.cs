@@ -74,7 +74,7 @@ namespace WebBookingCar.Areas.Admin.Controllers
 
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, shouldLockout: false);
+            var result = await SignInManager.PasswordSignInAsync(model.Account, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
                 case SignInStatus.Success:
@@ -165,6 +165,18 @@ namespace WebBookingCar.Areas.Admin.Controllers
                 ModelState.AddModelError("", error);
 
             }
+        }
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            var item = db.Roles.Find(id);
+            if (item != null)
+            {
+                db.Roles.Remove(item);
+                db.SaveChanges();
+                return Json(new { success = true });
+            }
+            return Json(new { success = false });
         }
     }
 }

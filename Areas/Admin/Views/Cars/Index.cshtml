@@ -178,7 +178,7 @@
                     var conf = confirm("Bạn có muốn xóa tất cả các xe không");
                     if (conf === true) {
                         $.ajax({
-                            url: '/admin/new/deleteAll',
+                            url: '/admin/cars/deleteAll',
                             type: "POST",
                             data: { ids: str },
                             success: function (rs) {
