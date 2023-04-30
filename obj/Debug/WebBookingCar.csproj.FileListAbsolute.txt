@@ -110,8 +110,6 @@ C:\Users\nctam\Source\Repos\Website-ChoThueXe\bin\roslyn\vbc.exe.config
 C:\Users\nctam\Source\Repos\Website-ChoThueXe\bin\roslyn\vbc.rsp
 C:\Users\nctam\Source\Repos\Website-ChoThueXe\bin\roslyn\VBCSCompiler.exe
 C:\Users\nctam\Source\Repos\Website-ChoThueXe\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\nctam\source\repos\Website-ChoThueXe\obj\Debug\WebBookingCar.Migrations.CreatedDataabase.resources
-C:\Users\nctam\source\repos\Website-ChoThueXe\obj\Debug\WebBookingCar.csproj.GenerateResource.cache
 C:\Users\lechi\Downloads\Website-ChoThueXe (1)\Website-ChoThueXe\bin\WebBookingCar.dll.config
 C:\Users\lechi\Downloads\Website-ChoThueXe (1)\Website-ChoThueXe\bin\WebBookingCar.dll
 C:\Users\lechi\Downloads\Website-ChoThueXe (1)\Website-ChoThueXe\bin\WebBookingCar.pdb
@@ -228,3 +226,4 @@ C:\Users\lechi\Downloads\Website-ChoThueXe (1)\Website-ChoThueXe\obj\Debug\WebBo
 C:\Users\lechi\Downloads\Website-ChoThueXe (1)\Website-ChoThueXe\obj\Debug\WebBookingCar.csproj.CopyComplete
 C:\Users\lechi\Downloads\Website-ChoThueXe (1)\Website-ChoThueXe\obj\Debug\WebBookingCar.dll
 C:\Users\lechi\Downloads\Website-ChoThueXe (1)\Website-ChoThueXe\obj\Debug\WebBookingCar.pdb
+C:\Users\nctam\Source\Repos\Website-ChoThueXe\bin\CKFinder.pdb
